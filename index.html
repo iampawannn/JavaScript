@@ -77,14 +77,51 @@ switch (day) {
 //     i++;
 //      } while (i <=10);
 // for of
-   let numbers = [1,2,3,4,5,6,,7,8];
+//    let numbers = [1,2,3,4,5,6,,7,8];
 //    for (let num of numbers) {
 //     console.log(num);
 //    }
 // for each
-   numbers.forEach(function(num){
-    console.log(num);
-   })   
+//    numbers.forEach(function(num){
+//     console.log(num);
+//    })   
+
+//Function
+function greet(name) {
+    return "Hello," + name + "!";
+}
+let message1 = greet("Priyansh")
+let message = greet("Priya");
+console.log(message1, message);
+
+// Array
+let days = ["Sunday", "Monday", "Tuesday"];
+console.log(days[0]);
+days.push("Friday");
+console.log(days);
+days.pop();
+console.log(days);
+// days.unshift("Saturday");
+console.log(days);
+days[0] = "Friday";
+console.log(days);
+
+// object 
+let person = {
+    name: "Pawan",
+    age: "18",
+    city: "Kathmandu",
+    zipcode: " "
+}
+console.log(person.name)
+console.log(greet(person.name))  ;
+
+    
+
+
+
+
+
 
  </script>
 
