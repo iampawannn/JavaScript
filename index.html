@@ -175,15 +175,51 @@
     // console.log(indoor);
 
     //for Each
-    const months = ['Jan', 'Feb', 'Mar'];
-    months.forEach(month => {
-        console.log(month)
-    })
+    // const months = ['Jan', 'Feb', 'Mar'];
+    // months.forEach(month => {
+    //     console.log(month)
+    // })
 
-    //
-    let sports = ['badminton', 'cricket', 'golf'];
-    let caps = sports.map(sport=>sport.toUpperCase());
-    console.log(caps);
+    // //
+    // let sports = ['badminton', 'cricket', 'golf'];
+    // let caps = sports.map(sport=>sport.toUpperCase());
+    // console.log(caps);
+
+    //OBJECTS
+    let person = {
+        name:"Salman",
+        age:18,
+        city:'Mumbai',
+        country: 'Australia'
+    
+    };
+   console.log(Object.keys(person));
+    console.log(Object.values(person));
+     console.log(Object. entries(person));
+     person.caste = 'Bhai';
+     
+     console.log(person)
+     person["citizen"] = "Nepal";
+
+     console.log(person)
+     delete person.age;
+     console.log(person)
+
+     console.log("city" in person)
+
+     console.log("address" in person)
+
+     person.city = "kathmandu";
+     console.log(person.city)
+
+     person.age = 18;
+     console.log(person.age);
+
+//loop
+// Object.keys(person).forEach(key=>{
+//     console.log(key + "" : "" + person[key] )
+// })
+
  </script>
 
 
