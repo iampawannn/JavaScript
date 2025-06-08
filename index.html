@@ -186,70 +186,134 @@
     // console.log(caps);
 
     //OBJECTS
-    let person = {
-        name:"Salman",
-        age:18,
-        city:'Mumbai',
-        country: 'Australia'
+//     let person = {
+//         name:"Salman",
+//         age:18,
+//         city:'Mumbai',
+//         country: 'Australia'
     
-    };
-   console.log(Object.keys(person));
-    console.log(Object.values(person));
-     console.log(Object. entries(person));
-     person.caste = 'Bhai';
+//     };
+//    console.log(Object.keys(person));
+//     console.log(Object.values(person));
+//      console.log(Object. entries(person));
+//      person.caste = 'Bhai';
      
-     console.log(person)
-     person["citizen"] = "Nepal";
+//      console.log(person)
+//      person["citizen"] = "Nepal";
 
-     console.log(person)
-     delete person.age;
-     console.log(person)
+//      console.log(person)
+//      delete person.age;
+//      console.log(person)
 
-     console.log("city" in person)
+//      console.log("city" in person)
 
-     console.log("address" in person)
+//      console.log("address" in person)
 
-     person.city = "kathmandu";
-     console.log(person.city)
+//      person.city = "kathmandu";
+//      console.log(person.city)
 
-     person.age = 18;
-     console.log(person.age);
+//      person.age = 18;
+//      console.log(person.age);
 
-     console.log(person.hasOwnProperty("age"))
+//      console.log(person.hasOwnProperty("age"))
 
-//loop
-// Object.keys(person).forEach(key=>{
-//     console.log(key + "" : "" + person[key] )
-// })
+// //loop
+// // Object.keys(person).forEach(key=>{
+// //     console.log(key + "" : "" + person[key] )
+// // })
 
-// Arrow Functions
-// syntax
-const functionName = (parameters) => {
-    //
+// // Arrow Functions
+// // syntax
+// const functionName = (parameters) => {
+//     //
 
-}
-// arrow function with add
-const add = (a,b) => {
-    return (a+b);
-} 
-console.log("Sum of a and b is", add(5,8))
+// }
+// // arrow function with add
+// const add = (a,b) => {
+//     return (a+b);
+// } 
+// console.log("Sum of a and b is", add(5,8))
 
 
 
-// arrow function for squareroot
+// // arrow function for squareroot
 
- const sqrRoot = (a) => {
-    return(a/(a*a));
+//  const sqrRoot = (a) => {
+//     return(a/(a*a));
 
- }
- console.log(sqrRoot(4))
+//  }
+//  console.log(sqrRoot(4))
 
- //arrow function without passing parameters
-const greet = () => {
-    console.log("Hellow1");
+//  //arrow function without passing parameters
+// const greet = () => {
+//     console.log("Hellow1");
 
-}
-greet();
+// };
+// greet();
+
+// // Regular function
+// const people = {
+//     name:" Kevin",
+//     hello:function(){
+//         console.log("Good Morning,"+ this.name)
+//     }
+
+// }
+// people.hello();
+
+// // with blending
+// const person1 = {
+//       name:" Kevin",
+//     hello:() => {
+//         console.log("Hi,"+this.name);
+//     }
+//     }
+//     person1.hello();
+
+    // correct way for arrow function with this.
+    // function timer() {
+    //     this.seconds = 0,
+    //     setInterval(()=> {
+    //         this.seconds++;
+    //         console.log(this.seconds);
+    //     },1000)
+
+    // }
+    // new timer()  
+    // let count = 0;
+    // const timer = setInterval(()=> {
+    //     count++;
+    //     console.log(count);
+    //     if (count === 5) {
+    //         clearInterval(timer);
+    //         console.log("stop")
+    //     }
+    // }, 1000)
+
+    // call back
+    function greett(name,callback) {
+        console.log("hello," + name);
+        callback();
+    } 
+    function saySomething() {
+        console.log("goodmorning");
+    } 
+    greett("Kevin", saySomething);
+
+    // callback parameters
+        function sum(a, b, callback) {
+        const result = a + b;
+        callback(result); // pass the result to the callback function
+        }
+
+    // Define a callback function
+        function displayResult(value) {
+        console.log("The sum is:", value);
+        }
+
+    // Call the sum function with a callback
+        sum(5, 3, displayResult); // Output: The sum is: 8
+
  </script>
 
 
