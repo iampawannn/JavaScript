@@ -314,6 +314,29 @@
     // Call the sum function with a callback
         sum(5, 3, displayResult); // Output: The sum is: 8
 
+
+    // Asynchronous JavaScript
+    // console.log("start");
+    // setTimeout(() => {
+    //     console.log("Inside callback")
+    // }, 1);  //execute after 1 sec
+    // console.log("end")
+    // console.log("Nevin");
+    // console.log("Pevin");
+    // console.log("Sevin");
+    // console.log("Tevin");
+    // console.log("Levin");
+
+
+    // Learn Callbacks
+    function fetchData(callback) {
+        setTimeout(()=> {
+            callback("Data received") 
+        }, 1000)
+    } 
+    fetchData((data)=> {
+        console.log(data);
+    }) 
  </script>
 
 
