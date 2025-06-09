@@ -352,18 +352,40 @@
 
     // Async/Await
 
-    const fetchData= () => {
-        return new Promise(resolve => {
-            setTimeout(()=> {
-                resolve("Async/ Await data")
-            }, 5000)
-        })
-    } ;
-    const loadData = async() => {
-        const result = await fetchData()
-        console.log(result);
-    };
-     loadData()
+    // const fetchData= () => {
+    //     return new Promise(resolve => {
+    //         setTimeout(()=> {
+    //             resolve("Async/ Await data")
+    //         }, 5000)
+    //     })
+    // } ;
+    // const loadData = async() => {
+    //     const result = await fetchData()
+    //     console.log(result);
+    // };
+    //  loadData()
+
+    // Error Handling in callback
+    function fetchData(callback) {
+        setTimeout(()=> {
+            const error = false;
+            if(error) {
+                callback("Something went wrong", null);
+               
+            } else {
+                callback(null, "Data receivecd succsesfully")    
+                }
+        }, 5000)
+    }; 
+    fetchData((err, data)=> {
+        if(err) {
+            console.error("Error occured", err)
+        } else {
+            console.log("Success", data)
+        }
+    });
+        
+    
  </script>
 
 
