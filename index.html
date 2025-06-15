@@ -387,7 +387,7 @@
 
     // Catch
         
-     const fetchData = () => {
+     /* const fetchData = () => {
         return new Promise((resolve, reject) => {
            const error = false; 
         setTimeout(()=> {
@@ -407,8 +407,30 @@
     .catch(err=> {
         console.error("Unsuccessful", err);
 
-    }) 
+    }) */
+
+    // Error handling with promise
+    const fetchData = () => {
+        return new Promise((resolve, reject)=> {
+            // const error = true;
+            const error = false;
+            setTimeout(()=> {
+                if(error) {
+                    reject("Promise Rejected due to error.")
+                } else {
+                    resolve("Promise resolve with data")
+                }
+            }, 4000)
+        })
+    }
+    return fetchData()
+    .then(data=>console.log("Success",data))
+    .catch(err=>console.error("Error occured", err))
+
+    
+
  </script>
+
 
 
 
